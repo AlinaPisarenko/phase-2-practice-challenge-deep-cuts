@@ -118,3 +118,15 @@ form {
     gap: 2em;
     margin-top: 2em;
 }
+
+button {
+    font-family: gochi;
+    font-size: 1em;
+    background: #0dfdfd;
+    color: black;
+    border-radius: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+}

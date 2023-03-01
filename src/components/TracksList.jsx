@@ -1,6 +1,10 @@
 import React from 'react'
+import Track from './Track'
 
-function TracksList() {
+function TracksList({ tracks, handleClick, handleDelete }) {
+
+
+
   return (
     <table>
       <tbody>
@@ -13,13 +17,14 @@ function TracksList() {
             <h3 className="row-title">Title</h3>
           </th>
           <th>
-            <h3 className="">Artist</h3>
+            <h3 onClick={(e) => handleClick(e.target.className)} className="Artist">Artist</h3>
           </th>
           <th>
-            <h3 className="">BPM</h3>
+            <h3 onClick={(e) => handleClick(e.target.className)} className="BPM">BPM</h3>
           </th>
         </tr>
-        {/* render a list of <Track> components here */}
+        {/* map through tracks array and return component for each track */}
+        {tracks.map(track => <Track key={track.id} track={track} handleDelete={handleDelete} />)}
       </tbody>
     </table>
   )
