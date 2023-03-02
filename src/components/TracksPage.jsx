@@ -39,7 +39,7 @@ const handleAddTrack = newTrack => {
 }
 
 // function that sort list by Artist or BPM
-const handleClick = (name) => {
+const handleClick = name => {
   if (name === 'Artist') {
     // sort returns an existed array after sorting elements
     // we need to make a copy of an existing array to trigger re-render
